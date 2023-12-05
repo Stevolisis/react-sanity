@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-export default function Post({id,title,author,img,body}){
+export default function PostList({id,title,author,img,body}){
 
     return(
         <Link to={`/post/${id}`}>
