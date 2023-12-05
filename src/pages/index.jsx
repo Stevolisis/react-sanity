@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Header from "../components/Header";
-import CategoryList from "./CategoryList";
+import CategoryList from "../components/CategoryList";
 
 export default function Index(){
     const [categories,setCategories] = useState([
-        {id:1,title: 'Solar Energy',img:'/advert4.jpg'},
-        {id:2,title: 'Wind Mills',img:'/advert5.jpg'},
-        {id:3,title: 'Hydro-electric Plants',img:'/advert6.jpg'},
-        {id:4,title: 'Nuclear Energy',img:'/advert7.jpg'},
-        {id:5,title: 'Solar Energy',img:'/advert8.jpg'}
+        {id:1,title: 'Energy',img:'/advert4.jpg'},
+        {id:2,title: 'Politics',img:'/advert5.jpg'},
+        {id:3,title: 'Automobiles',img:'/advert6.jpg'},
+        {id:4,title: 'Entertainment',img:'/advert7.jpg'},
+        {id:5,title: 'Tech',img:'/advert8.jpg'}
 
     ]);
 
