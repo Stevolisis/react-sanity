@@ -7,7 +7,7 @@ export default function Post(){
 
     return(
         <>
-            <Header type='post' title='Solar Energy'/>
+            <Header type='post' title='Solar Energy' pageParams={id}/>
             <section className="px-7 sm:px-14 md:px-20">
                 <div className="py-12">
                     <h2 className=" font-bold text-4xl text-indigo-950">Solar Energy</h2>

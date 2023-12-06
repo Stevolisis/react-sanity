@@ -1,9 +1,11 @@
 import { useState } from "react";
 import PostList from "../components/PostList";
 import Header from "../components/Header";
+import { useParams } from "react-router-dom";
 
 
 export default function Category(){
+    const {id} = useParams();
     const [posts,setPosts] = useState([
         {id:1,title: 'Solar Energy',author:'James Bond',description:'Welcome to a world where luxury meets comfort, and sophistication intertwines with tranquility. In the heart of Abuja, we present the epitome of exquisite living – the best homes crafted for those who seek the extraordinary.', img:'/advert2.jpg'},
         {id:2,title: 'Wind Mills',author:'Bandana Rock',description:'Welcome to a world where luxury meets comfort, and sophistication intertwines with tranquility. In the heart of Abuja, we present the epitome of exquisite living – the best homes crafted for those who seek the extraordinary.', img:'/advert3.jpg'},
@@ -14,7 +16,7 @@ export default function Category(){
     ]);
     return(
         <>
-            <Header type='category' title='Energy'/>
+            <Header type='category' title='Energy' pageParams={id}/>
             <section className="px-10 sm:px-14 md:px-20 py-10 bg-gray-100 h-auto flex
              justify-center gap-4 flex-wrap">
                 {

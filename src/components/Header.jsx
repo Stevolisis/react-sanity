@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-export default function Header({type,title}){
+export default function Header({pageParams,type,title}){
 
     return(
         <header className="flex justify-between bg-indigo-700 text-white px-5 sm:px-14 md:px-20 py-7">
@@ -9,8 +9,8 @@ export default function Header({type,title}){
                 <Link to='/' className="text-2xl sm:text-3xl font-bold">SanBlog</Link>
                 <p className="text-xs font-normal mt-1">
                     {type && type === 'category' ? 
-                    type && <Link to={`/category/${title}`}>{type + ' > ' + title}</Link> :
-                    type && <Link to={`/post/${title}`}>{type + ' > ' + title}</Link>}
+                    type && <Link to={`/category/${pageParams}`}>{type + ' > ' + title}</Link> :
+                    type && <Link to={`/post/${pageParams}`}>{type + ' > ' + title}</Link>}
                 </p>  
             </div>
 
