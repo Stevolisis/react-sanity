@@ -13,7 +13,7 @@ export default function Header({type,title}){
 
             <div className="flex items-center gap-4">
                 <Link to='/posts' className="underline text-sm sm:text-base hover:text-blue-500">All Posts</Link>
-                <Link to='/contact_us' className="underline text-sm sm:text-base hover:text-blue-500">Contact us</Link>
+                <Link to='/about_us' className="underline text-sm sm:text-base hover:text-blue-500">Contact us</Link>
             </div>
         </header>
     )

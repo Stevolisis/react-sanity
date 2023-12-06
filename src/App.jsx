@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Index from './pages';
 import Category from './pages/category';
 import Post from './pages/post';
-import ContactUs from './pages/contact_us';
+import AboutUs from './pages/about_us';
 import Posts from './pages/posts';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path="/category/:id" element={<Category />}/>
           <Route path="/posts" element={<Posts />}/>
             <Route path="/post/:id" element={<Post />}/>
-            <Route path="/contact_us" element={<ContactUs />}/>
+            <Route path="/about_us" element={<AboutUs />}/>
         </Routes>
       </BrowserRouter>
     </>
