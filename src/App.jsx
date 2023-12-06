@@ -1,6 +1,6 @@
 import './index.css'
 import { Route, Routes } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter  } from 'react-router-dom';
 import Index from './pages';
 import Post from './pages/post';
 import AboutUs from './pages/about_us';
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter >
         <Routes>
           <Route path="/" element={<Index />} exact/>
           <Route path="/category/:id" element={<Category />}/>
@@ -19,7 +19,7 @@ function App() {
           <Route path="/post/:id" element={<Post />}/>
           <Route path="/about_us" element={<AboutUs />}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter >
     </>
   )
 }
