@@ -13,7 +13,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />}/>
+          <Route path="/" element={<Index />} exact/>
           <Route path="/category/:id" element={<Category />}/>
           <Route path="/posts" element={<Posts />}/>
           <Route path="/post/:id" element={<Post />}/>
