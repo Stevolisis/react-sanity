@@ -12,8 +12,8 @@ export default function Header({type,title}){
             </Link>
 
             <div className="flex items-center gap-4">
-                <Link href='/posts' className="text-sm sm:text-base hover:text-blue-500">All Posts</Link>
-                <Link href='/contact_us' className="text-sm sm:text-base hover:text-blue-500">Contact us</Link>
+                <Link to='/posts' className="underline text-sm sm:text-base hover:text-blue-500">All Posts</Link>
+                <Link to='/contact_us' className="underline text-sm sm:text-base hover:text-blue-500">Contact us</Link>
             </div>
         </header>
     )

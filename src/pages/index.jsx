@@ -4,11 +4,11 @@ import CategoryList from "../components/CategoryList";
 
 export default function Index(){
     const [categories,setCategories] = useState([
-        {id:1,title: 'Energy',img:'/advert4.jpg'},
-        {id:2,title: 'Politics',img:'/advert5.jpg'},
-        {id:3,title: 'Automobiles',img:'/advert6.jpg'},
-        {id:4,title: 'Entertainment',img:'/advert7.jpg'},
-        {id:5,title: 'Tech',img:'/advert8.jpg'}
+        {id:1,title: 'Energy',img:'/advert1.jpg'},
+        {id:2,title: 'Politics',img:'/advert2.jpg'},
+        {id:3,title: 'Automobiles',img:'/advert3.jpg'},
+        {id:4,title: 'Entertainment',img:'/advert4.jpg'},
+        {id:5,title: 'Tech',img:'/advert5.jpg'}
 
     ]);
 
