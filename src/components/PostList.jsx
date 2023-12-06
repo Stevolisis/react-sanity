@@ -5,7 +5,7 @@ export default function PostList({id,title,author,img,description}){
 
     return(
         <Link to={`/post/${id}`}>
-            <div className="">
+            <div className="bg-gray-200 min-w-[300px] w-[300px] min-h-[180px] h-[180px] rounded-tl-[5px] rounded-tr-[5px]">
                 <img src={img} alt={title} className="rounded-tl-[5px] rounded-tr-[5px] object-cover min-w-[300px] w-[300px] min-h-[180px] h-[180px]"/>
             </div>
 

@@ -5,7 +5,7 @@ export default function CategoryList({id,img,title}){
 
     return(
         <Link to={`/category/${id}`} className=" ">
-            <div>
+            <div className="bg-gray-200 min-w-[300px] w-[300px] min-h-[180px] h-[180px]">
                 <img src={img} alt={title} className=" object-cover min-w-[300px] w-[300px] min-h-[180px] h-[180px]"/>
             </div>
 
