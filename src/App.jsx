@@ -5,7 +5,7 @@ import Index from './pages';
 import Post from './pages/post';
 import AboutUs from './pages/about_us';
 import Posts from './pages/posts';
-import Category from './pages/category';
+import Category from './pages/Category';
 
 function App() {
 
