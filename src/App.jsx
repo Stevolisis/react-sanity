@@ -2,7 +2,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from './pages';
 import Post from './pages/post';
-import AboutUs from './pages/about_us';
+import Link from './pages/link';
 import Posts from './pages/posts';
 import Category from './pages/Category';
 
@@ -25,8 +25,8 @@ function App() {
       element: <Post />,
     },
     {
-      path: "/about_us",
-      element: <AboutUs />,
+      path: "/link/:slug",
+      element: <Link />,
     },
   ]);
   

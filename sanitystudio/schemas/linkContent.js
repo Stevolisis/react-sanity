@@ -1,8 +1,8 @@
 import { defineType} from 'sanity'
 
 export default defineType({
-    name: 'linkContent',
-    title: 'LinkContent',
+    name: 'link',
+    title: 'Link',
     type: 'document',
     fields: [
       {
@@ -13,7 +13,16 @@ export default defineType({
       {
         name: 'slug',
         title: 'Slug',
-        type: 'string',
+        type: 'slug',
+        options: {
+          source: 'name',
+          maxLength: 96,
+        },
+      },
+      {
+        name: 'content',
+        title: 'Content',
+        type: 'blockContent',
       },
     ],
 });
