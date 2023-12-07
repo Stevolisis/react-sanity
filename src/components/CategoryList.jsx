@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-export default function CategoryList({slug,img,title,imageAlt}){
+export default function CategoryList({id,slug,img,title,imageAlt}){
 
     return(
         <Link to={`/category/${slug}`} className=" ">

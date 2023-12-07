@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 
-export default function PostList({id,title,author,img,description}){
+export default function PostList({id,slug,title,author,img,imageAlt,description}){
 
     return(
-        <Link to={`/post/${id}`}>
+        <Link to={`/post/${slug}`}>
             <div className="bg-gray-200 min-w-[300px] w-[300px] min-h-[180px] h-[180px] rounded-tl-[5px] rounded-tr-[5px]">
-                <img src={img} alt={title} className="rounded-tl-[5px] rounded-tr-[5px] object-cover min-w-[300px] w-[300px] min-h-[180px] h-[180px]"/>
+                <img src={img} alt={imageAlt} className="rounded-tl-[5px] rounded-tr-[5px] object-cover min-w-[300px] w-[300px] min-h-[180px] h-[180px]"/>
             </div>
 
             <div className="bg-indigo-100 p-6 rounded-bl-[5px] rounded-br-[5px] min-w-[300px] w-[300px]">

@@ -13,7 +13,7 @@ function App() {
       element: <Index />,
     },
     {
-      path: "/category/:id",
+      path: "/category/:slug",
       element: <Category />,
     },
     {
@@ -21,7 +21,7 @@ function App() {
       element: <Posts />,
     },
     {
-      path: "/post/:id",
+      path: "/post/:slug",
       element: <Post />,
     },
     {
