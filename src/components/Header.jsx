@@ -5,8 +5,20 @@ import { useEffect, useState } from "react";
 
 export default function Header({pageParams,type,title}){
     const [links,setLinks] = useState([]);
+    const [logo,setLogo] = useState(null);
 
     useEffect(()=>{
+        sanityClient.fetch(`*[_type == "logo"]{name}[0]`)
+        .then(res=>{
+            console.log('data: ',res);
+            setLogo(res);
+        }).catch(err=>{
+            Swal(
+                'Error Occured',
+                err.message,
+                'error'
+            )
+        });
         sanityClient.fetch(`*[_type == "link"] | order(_id desc){
             _id,
             name,
@@ -27,7 +39,7 @@ export default function Header({pageParams,type,title}){
     return(
         <header className="flex justify-between bg-indigo-700 text-white px-5 sm:px-14 md:px-20 py-7">
             <div>
-                <Link to='/' className="text-2xl sm:text-3xl font-bold">SanBlog</Link>
+                <Link to='/' className="text-2xl sm:text-3xl font-bold">{logo ? logo.name : '...loading'}</Link>
                 <p className="text-xs font-normal mt-1">
                     {type && type === 'category' ? 
                     type && <Link to={`/category/${pageParams}`}>{type + ' > ' + title}</Link> :
