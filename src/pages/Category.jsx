@@ -39,7 +39,11 @@ export default function Category(){
             console.log('data: ',res);
             setPosts(res);
         }).catch(err=>{
-            console.log('err: ',err);
+            Swal(
+                'Error Occured',
+                err.message,
+                'error'
+            )
         });
     },[slug]);
 
