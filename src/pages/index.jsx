@@ -1,25 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import CategoryList from "../components/CategoryList";
+import sanityClient from '../sanityServer';
 
 export default function Index(){
-    const [categories,setCategories] = useState([
-        {id:1,title: 'Energy',img:'/advert1.jpg'},
-        {id:2,title: 'Politics',img:'/advert2.jpg'},
-        {id:3,title: 'Automobiles',img:'/advert3.jpg'},
-        {id:4,title: 'Entertainment',img:'/advert4.jpg'},
-        {id:5,title: 'Tech',img:'/advert5.jpg'}
+    const [categories,setCategories] = useState([]);
 
-    ]);
+    useEffect(()=>{
+        sanityClient.fetch(`*[_type == "category"]{title, slug, "imageUrl": image.asset->url, "imageAlt": image.alt}`).then(res=>{
+            setCategories(res);
+            console.log('data: ',res);
+        }).catch(err=>{
+            console.log('error: ',err);
+        })
+    },[]);
 
     return(
         <>
             <Header/>
-            <section className="px-10 sm:px-14 md:px-20 py-10 bg-gray-100 h-auto flex
+            <section className="px-10 sm:px-14 md:px-20 py-10 h-auto flex
              justify-center gap-4 flex-wrap">
                 {
                     categories && categories.map((cat,i)=>{
-                        return <CategoryList key={i} title={cat.title} id={cat.id} img={cat.img}/>
+                        return <CategoryList key={i} title={cat.title} img={cat.imageUrl} slug={cat.slug.current} imageAlt={cat.imageAlt}/>
                     })
                 }
             </section>
