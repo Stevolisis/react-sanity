@@ -10,12 +10,9 @@
 
 @layer components {
   /* .radial{
-    transform: rotate(-1.5deg);
-    background-color: #6EACE6CC;
-    width:101vw;
-    margin-left: -20px;
-  } */
-}
+    clip-path: polygon(0 50%, 100% 0,100% 50%,0 100%);  
+  }*/
+} 
 
 @layer base {
   @font-face {
