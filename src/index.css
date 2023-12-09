@@ -7,3 +7,27 @@
   margin: 0;
   padding: 0;
 }
+
+@layer components {
+  /* .radial{
+    transform: rotate(-1.5deg);
+    background-color: #6EACE6CC;
+    width:101vw;
+    margin-left: -20px;
+  } */
+}
+
+@layer base {
+  @font-face {
+    font-family: Playfair;
+    font-weight: 400;
+    src: url(./assets/font/Playfair.ttf);
+  }
+  @font-face {
+    font-family: Raleway;
+    font-weight: 400;
+    src: url(./assets/font/Raleway.ttf);
+  }
+
+
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import Motto from "../components/motto";
 import CategoryList from "../components/CategoryList";
 import sanityClient from '../sanityServer';
 import Swal from "sweetalert2";
@@ -18,11 +19,22 @@ export default function Index(){
                 'error'
             )
         })
+
+        sanityClient.fetch(`*[_type == "page"]`).then(res=>{
+            console.log('page: ',res);
+        }).catch(err=>{
+            Swal(
+                'Error Occured',
+                err.message,
+                'error'
+            )
+        })
     },[]);
 
     return(
         <>
             <Header/>
+            <Motto/>
             <section className="px-10 sm:px-14 md:px-20 py-10 h-auto flex
              justify-center gap-4 flex-wrap">
                 {
