@@ -11,9 +11,6 @@ export default function Motto(){
                     Discover furnished homes tailored to your taste with our diverse selection of spacious and comfortable living spaces.
                 </p>
             </div>
-            {/* <div>
-                <img src="/motto_ellipse"/>
-            </div> */}
         </section>
     )
 }

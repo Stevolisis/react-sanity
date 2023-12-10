@@ -10,7 +10,7 @@
 
 @layer components {
   .radial{
-    background-image: linear-gradient(45deg,rgba(111, 173, 231, 0.8),rgba(158, 200, 238, 0.4)),url('./assets/motto3.png');
+    background-image: radial-gradient(circle at center,#9ec7eeb4 70%,#6eace6e5 70%),url('./assets/motto3.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
