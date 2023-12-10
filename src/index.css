@@ -9,10 +9,10 @@
 }
 
 @layer components {
-  /* .radial{
-    clip-path: polygon(0 50%, 100% 0,100% 50%,0 100%);  
-  }*/
-} 
+  .radial{
+    background-image: url('./assets/motto.png');
+  }
+}
 
 @layer base {
   @font-face {
